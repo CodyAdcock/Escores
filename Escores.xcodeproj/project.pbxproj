@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		C37493002188D64000D07373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37492FF2188D64000D07373 /* AppDelegate.swift */; };
-		C37493022188D64000D07373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493012188D64000D07373 /* ViewController.swift */; };
-		C37493052188D64000D07373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493032188D64000D07373 /* Main.storyboard */; };
 		C37493072188D64100D07373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37493062188D64100D07373 /* Assets.xcassets */; };
 		C374930A2188D64100D07373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493082188D64100D07373 /* LaunchScreen.storyboard */; };
+		C374931D2188DAAD00D07373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C374931C2188DAAD00D07373 /* Main.storyboard */; };
+		C374931F2188DBFC00D07373 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C374931E2188DBFC00D07373 /* Home.storyboard */; };
+		C37493212188DC8200D07373 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493202188DC8200D07373 /* News.storyboard */; };
+		C37493232188DC9F00D07373 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493222188DC9F00D07373 /* Storyboard.storyboard */; };
+		C37493252188DCBE00D07373 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493242188DCBE00D07373 /* Discover.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C37492FC2188D64000D07373 /* Escores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Escores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37492FF2188D64000D07373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C37493012188D64000D07373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C37493042188D64000D07373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C37493062188D64100D07373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C37493092188D64100D07373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C374930B2188D64100D07373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C374931C2188DAAD00D07373 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C374931E2188DBFC00D07373 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C37493202188DC8200D07373 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		C37493222188DC9F00D07373 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C37493242188DCBE00D07373 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,105 @@
 		C37492FE2188D64000D07373 /* Escores */ = {
 			isa = PBXGroup;
 			children = (
+				C374931A2188D9B400D07373 /* View Controller */,
+				C37493192188D9B300D07373 /* View */,
+				C37493182188D9B200D07373 /* Model Controller */,
+				C37493172188D9B000D07373 /* Model */,
+				C37493162188D9A400D07373 /* ViewControllers */,
+				C37493152188D98300D07373 /* Resources */,
+			);
+			path = Escores;
+			sourceTree = "<group>";
+		};
+		C37493112188D97600D07373 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				C37493242188DCBE00D07373 /* Discover.storyboard */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		C37493122188D97900D07373 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				C37493222188DC9F00D07373 /* Storyboard.storyboard */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		C37493132188D97B00D07373 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				C37493202188DC8200D07373 /* News.storyboard */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		C37493142188D97C00D07373 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C374931E2188DBFC00D07373 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C37493152188D98300D07373 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C37492FF2188D64000D07373 /* AppDelegate.swift */,
-				C37493012188D64000D07373 /* ViewController.swift */,
-				C37493032188D64000D07373 /* Main.storyboard */,
 				C37493062188D64100D07373 /* Assets.xcassets */,
 				C37493082188D64100D07373 /* LaunchScreen.storyboard */,
 				C374930B2188D64100D07373 /* Info.plist */,
 			);
-			path = Escores;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C37493162188D9A400D07373 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C374931B2188DA8800D07373 /* Main */,
+				C37493142188D97C00D07373 /* Home */,
+				C37493132188D97B00D07373 /* News */,
+				C37493122188D97900D07373 /* Stats */,
+				C37493112188D97600D07373 /* Discover */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C37493172188D9B000D07373 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C37493182188D9B200D07373 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C37493192188D9B300D07373 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C374931A2188D9B400D07373 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		C374931B2188DA8800D07373 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C374931C2188DAAD00D07373 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +219,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C374931D2188DAAD00D07373 /* Main.storyboard in Resources */,
 				C374930A2188D64100D07373 /* LaunchScreen.storyboard in Resources */,
+				C37493212188DC8200D07373 /* News.storyboard in Resources */,
 				C37493072188D64100D07373 /* Assets.xcassets in Resources */,
-				C37493052188D64000D07373 /* Main.storyboard in Resources */,
+				C374931F2188DBFC00D07373 /* Home.storyboard in Resources */,
+				C37493252188DCBE00D07373 /* Discover.storyboard in Resources */,
+				C37493232188DC9F00D07373 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C37493022188D64000D07373 /* ViewController.swift in Sources */,
 				C37493002188D64000D07373 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +243,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C37493032188D64000D07373 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C37493042188D64000D07373 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C37493082188D64100D07373 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
-				INFOPLIST_FILE = Escores/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Escores/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
-				INFOPLIST_FILE = Escores/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Escores/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
