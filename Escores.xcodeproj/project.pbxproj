@@ -13,8 +13,23 @@
 		C374931D2188DAAD00D07373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C374931C2188DAAD00D07373 /* Main.storyboard */; };
 		C374931F2188DBFC00D07373 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C374931E2188DBFC00D07373 /* Home.storyboard */; };
 		C37493212188DC8200D07373 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493202188DC8200D07373 /* News.storyboard */; };
-		C37493232188DC9F00D07373 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493222188DC9F00D07373 /* Storyboard.storyboard */; };
+		C37493232188DC9F00D07373 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493222188DC9F00D07373 /* Stats.storyboard */; };
 		C37493252188DCBE00D07373 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493242188DCBE00D07373 /* Discover.storyboard */; };
+		C374932A2188E51700D07373 /* Attribution Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493292188E51700D07373 /* Attribution Text.swift */; };
+		C374932E2188ED2000D07373 /* EscoreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374932D2188ED2000D07373 /* EscoreTabBarController.swift */; };
+		C37493302188FB1C00D07373 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */; };
+		C3749334218909F200D07373 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3749333218909F200D07373 /* VideoGame.swift */; };
+		C374933621890A9D00D07373 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933521890A9D00D07373 /* League.swift */; };
+		C374933821890BA100D07373 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933721890BA100D07373 /* Series.swift */; };
+		C374933A21890F6300D07373 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933921890F6300D07373 /* Tournament.swift */; };
+		C374933C218911FF00D07373 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933B218911FF00D07373 /* Match.swift */; };
+		C374933E2189175300D07373 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933D2189175300D07373 /* Result.swift */; };
+		C37493402189176700D07373 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933F2189176700D07373 /* Opponent.swift */; };
+		C37493422189177D00D07373 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493412189177D00D07373 /* Winner.swift */; };
+		C37493442189179000D07373 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493432189179000D07373 /* Live.swift */; };
+		C3749346218917A100D07373 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3749345218917A100D07373 /* Game.swift */; };
+		C37493482189182800D07373 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493472189182800D07373 /* Team.swift */; };
+		C374934A218919AE00D07373 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3749349218919AE00D07373 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +41,23 @@
 		C374931C2188DAAD00D07373 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C374931E2188DBFC00D07373 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C37493202188DC8200D07373 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
-		C37493222188DC9F00D07373 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C37493222188DC9F00D07373 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 		C37493242188DCBE00D07373 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		C37493292188E51700D07373 /* Attribution Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attribution Text.swift"; sourceTree = "<group>"; };
+		C374932D2188ED2000D07373 /* EscoreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscoreTabBarController.swift; sourceTree = "<group>"; };
+		C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		C3749333218909F200D07373 /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
+		C374933521890A9D00D07373 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		C374933721890BA100D07373 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		C374933921890F6300D07373 /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		C374933B218911FF00D07373 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		C374933D2189175300D07373 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C374933F2189176700D07373 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		C37493412189177D00D07373 /* Winner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
+		C37493432189179000D07373 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		C3749345218917A100D07373 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C37493472189182800D07373 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		C3749349218919AE00D07373 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +94,7 @@
 				C37493192188D9B300D07373 /* View */,
 				C37493182188D9B200D07373 /* Model Controller */,
 				C37493172188D9B000D07373 /* Model */,
-				C37493162188D9A400D07373 /* ViewControllers */,
+				C37493162188D9A400D07373 /* StoryBoards */,
 				C37493152188D98300D07373 /* Resources */,
 			);
 			path = Escores;
@@ -81,7 +111,7 @@
 		C37493122188D97900D07373 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				C37493222188DC9F00D07373 /* Storyboard.storyboard */,
+				C37493222188DC9F00D07373 /* Stats.storyboard */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -109,11 +139,12 @@
 				C37493062188D64100D07373 /* Assets.xcassets */,
 				C37493082188D64100D07373 /* LaunchScreen.storyboard */,
 				C374930B2188D64100D07373 /* Info.plist */,
+				C37493292188E51700D07373 /* Attribution Text.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C37493162188D9A400D07373 /* ViewControllers */ = {
+		C37493162188D9A400D07373 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
 				C374931B2188DA8800D07373 /* Main */,
@@ -122,12 +153,24 @@
 				C37493122188D97900D07373 /* Stats */,
 				C37493112188D97600D07373 /* Discover */,
 			);
-			path = ViewControllers;
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		C37493172188D9B000D07373 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3749333218909F200D07373 /* VideoGame.swift */,
+				C374933521890A9D00D07373 /* League.swift */,
+				C374933721890BA100D07373 /* Series.swift */,
+				C374933921890F6300D07373 /* Tournament.swift */,
+				C374933B218911FF00D07373 /* Match.swift */,
+				C3749345218917A100D07373 /* Game.swift */,
+				C37493412189177D00D07373 /* Winner.swift */,
+				C374933D2189175300D07373 /* Result.swift */,
+				C374933F2189176700D07373 /* Opponent.swift */,
+				C37493432189179000D07373 /* Live.swift */,
+				C37493472189182800D07373 /* Team.swift */,
+				C3749349218919AE00D07373 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +192,8 @@
 		C374931A2188D9B400D07373 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C374932D2188ED2000D07373 /* EscoreTabBarController.swift */,
+				C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -225,7 +270,7 @@
 				C37493072188D64100D07373 /* Assets.xcassets in Resources */,
 				C374931F2188DBFC00D07373 /* Home.storyboard in Resources */,
 				C37493252188DCBE00D07373 /* Discover.storyboard in Resources */,
-				C37493232188DC9F00D07373 /* Storyboard.storyboard in Resources */,
+				C37493232188DC9F00D07373 /* Stats.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +281,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C374932E2188ED2000D07373 /* EscoreTabBarController.swift in Sources */,
+				C3749346218917A100D07373 /* Game.swift in Sources */,
+				C374933621890A9D00D07373 /* League.swift in Sources */,
+				C37493422189177D00D07373 /* Winner.swift in Sources */,
+				C374933821890BA100D07373 /* Series.swift in Sources */,
+				C374933A21890F6300D07373 /* Tournament.swift in Sources */,
 				C37493002188D64000D07373 /* AppDelegate.swift in Sources */,
+				C37493302188FB1C00D07373 /* DiscoverTableViewController.swift in Sources */,
+				C374932A2188E51700D07373 /* Attribution Text.swift in Sources */,
+				C37493442189179000D07373 /* Live.swift in Sources */,
+				C37493402189176700D07373 /* Opponent.swift in Sources */,
+				C37493482189182800D07373 /* Team.swift in Sources */,
+				C3749334218909F200D07373 /* VideoGame.swift in Sources */,
+				C374933C218911FF00D07373 /* Match.swift in Sources */,
+				C374934A218919AE00D07373 /* Player.swift in Sources */,
+				C374933E2189175300D07373 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
