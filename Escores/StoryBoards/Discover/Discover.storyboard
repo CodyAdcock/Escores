@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Discover View Controller-->
+        <!--Video Games-->
         <scene sceneID="5IV-YX-w16">
             <objects>
-                <tableViewController id="HjP-vA-EaN" customClass="VideoGameTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Video Games" id="HjP-vA-EaN" customClass="VideoGameTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yr1-hw-Ibq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="260" y="126.38680659670166"/>
         </scene>
-        <!--Leagues Table View Controller-->
+        <!--Leagues-->
         <scene sceneID="veb-Dl-HaO">
             <objects>
-                <tableViewController title="Leagues Table View Controller" id="TQg-wd-2Lu" customClass="LeagueTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Leagues" id="TQg-wd-2Lu" customClass="LeagueTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6a2-HR-l67">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="-833" y="128"/>
         </scene>
-        <!--Leagues Table View Controller-->
+        <!--Series-->
         <scene sceneID="z3i-Sz-lAD">
             <objects>
-                <tableViewController title="Leagues Table View Controller" id="mK3-lN-4sd" customClass="SerieTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Series" id="mK3-lN-4sd" customClass="SerieTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h4o-N6-TDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(LEAGUE PLACEHOLDER)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb6-q1-Idf">
                                             <rect key="frame" x="24" y="19" width="219" height="61"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -204,10 +204,75 @@
                             <outlet property="delegate" destination="mK3-lN-4sd" id="i5t-w0-SQm"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="9sK-rc-gc9" kind="show" identifier="toTournamentVC" id="gvI-dR-g8v"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTe-kO-p5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1822" y="125"/>
+        </scene>
+        <!--Tournaments-->
+        <scene sceneID="5SJ-pi-ZGo">
+            <objects>
+                <tableViewController title="Tournaments" id="9sK-rc-gc9" customClass="TournamentTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w0U-5l-yuS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.23137254900000001" green="0.6705882353" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.23137254900000001" green="0.6705882353" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tournamentCell" rowHeight="102" id="QVW-8B-CFO" customClass="DiscoverTableViewCell" customModule="Escores" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QVW-8B-CFO" id="ZG7-oy-g32">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(LEAGUE PLACEHOLDER)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucg-7J-aJR">
+                                            <rect key="frame" x="24" y="19" width="219" height="61"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-NO-dCC">
+                                            <rect key="frame" x="251" y="8" width="116" height="83"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="83" id="ASW-gl-1Mu"/>
+                                                <constraint firstAttribute="width" constant="116" id="e4S-68-cPw"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jnp-NO-dCC" secondAttribute="trailing" constant="8" id="2qj-QX-Ctb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ucg-7J-aJR" secondAttribute="bottom" constant="8" id="FGM-bl-usy"/>
+                                        <constraint firstItem="Ucg-7J-aJR" firstAttribute="leading" secondItem="ZG7-oy-g32" secondAttribute="leadingMargin" constant="8" id="OEO-JA-552"/>
+                                        <constraint firstItem="Ucg-7J-aJR" firstAttribute="centerY" secondItem="jnp-NO-dCC" secondAttribute="centerY" id="OhF-TX-9SP"/>
+                                        <constraint firstAttribute="bottom" secondItem="jnp-NO-dCC" secondAttribute="bottom" constant="8" id="h8G-E7-9aW"/>
+                                        <constraint firstItem="jnp-NO-dCC" firstAttribute="top" secondItem="ZG7-oy-g32" secondAttribute="top" constant="8" id="ks0-qy-JnD"/>
+                                        <constraint firstItem="jnp-NO-dCC" firstAttribute="leading" secondItem="Ucg-7J-aJR" secondAttribute="trailing" constant="8" id="mJc-WP-UHL"/>
+                                        <constraint firstItem="Ucg-7J-aJR" firstAttribute="top" secondItem="ZG7-oy-g32" secondAttribute="topMargin" constant="8" id="n0a-hb-NJC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="flavorText" destination="Ucg-7J-aJR" id="3q8-WA-dJe"/>
+                                    <outlet property="linkedImage" destination="jnp-NO-dCC" id="ELc-YP-bHp"/>
+                                    <outlet property="textLabel" destination="Ucg-7J-aJR" id="dQc-x2-bgq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9sK-rc-gc9" id="fYZ-vX-omX"/>
+                            <outlet property="delegate" destination="9sK-rc-gc9" id="HCu-2H-DOk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOF-Wj-7RK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="127"/>
         </scene>
     </scenes>
 </document>

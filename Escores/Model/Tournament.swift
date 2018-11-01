@@ -46,7 +46,7 @@ import Foundation
 //}
 
 struct Tournament: Decodable{
-    let id: String
+    let id: Int
     let name: String
     let beginAt: String
     let matches: [MatchDictionary]
@@ -59,7 +59,7 @@ struct Tournament: Decodable{
     }
     
     struct MatchDictionary: Decodable{
-        let id: String
+        let id: Int
         let name: String
         let beginAt: String
         

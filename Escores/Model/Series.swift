@@ -40,11 +40,11 @@ import Foundation
 //}
 
 struct Series: Decodable{
-    let id: String
-    let url: String
-    let name: String
-    let year: String
-    let tournaments: [TournamentDictionary]
+    let id: Int?
+    let url: String?
+    let name: String?
+    let year: Int?
+    let tournaments: [TournamentDictionary]?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -54,9 +54,9 @@ struct Series: Decodable{
         case tournaments = "tournaments"
     }
     struct TournamentDictionary: Decodable{
-        let id: String
-        let name: String
-        let beginAt: String
+        let id: Int?
+        let name: String?
+        let beginAt: String?
         
         private enum CodingKeys: String, CodingKey {
             case id = "id"

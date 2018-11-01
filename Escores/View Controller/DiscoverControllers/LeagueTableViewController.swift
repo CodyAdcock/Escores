@@ -15,7 +15,9 @@ class LeagueTableViewController: UITableViewController {
 
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false
-        self.navigationController!.navigationBar.tintColor = .white
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
+        
+        
     }
 
 

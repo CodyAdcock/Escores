@@ -29,7 +29,7 @@ import Foundation
 struct League: Decodable{
     let id: Int
     let url: String?
-    let name: String
+    let name: String?
     let imageUrl: String?
     let series: [SeriesDictionary]?
     
@@ -43,7 +43,7 @@ struct League: Decodable{
     struct SeriesDictionary: Decodable{
         let id: Int
         let url: String?
-        let name: String
+        let name: String?
         let year: Int?
         
         private enum CodingKeys: String, CodingKey {

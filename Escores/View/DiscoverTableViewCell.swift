@@ -16,16 +16,20 @@ class DiscoverTableViewCell: UITableViewCell {
     var myText: String?{
         didSet{
            flavorText.text = myText
+            if linkedImage.image == nil{
+                linkedImage.isHidden = true
+            }
         }
     }
     var imageAsUrlString: String?{
         didSet{
             guard let imageAsUrlString = imageAsUrlString else {return}
             loadFromURL(urlAsString: imageAsUrlString)
-//            linkedImage.layer.shadowColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
-//            linkedImage.layer.shadowOffset = CGSize(width: 5, height: 5)
-//            linkedImage.layer.shadowOpacity = 1
-//            linkedImage.layer.shadowRadius = 10
+            linkedImage.layer.shadowColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
+            linkedImage.layer.shadowOffset = CGSize(width: 0, height: 0)
+            linkedImage.layer.shadowOpacity = 1
+            linkedImage.layer.shadowRadius = 1
+            
         }
     }
     
@@ -36,6 +40,7 @@ class DiscoverTableViewCell: UITableViewCell {
                 if let image = UIImage(data: data){
                     DispatchQueue.main.async {
                         self.linkedImage.image = image
+                        self.linkedImage.isHidden = false
                     }
                 }
             }

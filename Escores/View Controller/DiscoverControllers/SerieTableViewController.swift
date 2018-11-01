@@ -15,7 +15,7 @@ class SerieTableViewController: UITableViewController {
         
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false
-        self.navigationController!.navigationBar.tintColor = .white
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
     }
     
     
@@ -29,7 +29,8 @@ class SerieTableViewController: UITableViewController {
         
         guard let series = SourceOfTruth.shared.currentLeague?.series else {return UITableViewCell()}
         let year = (series[indexPath.row].year)
-        cell?.myText = "\(series[indexPath.row].name) \nYear: \(year!)"
+        let name = series[indexPath.row].name ?? "Series \(indexPath.row + 1)"
+        cell?.myText = "\(name) \nYear: \(year!)"
         
         return cell ?? UITableViewCell()
     }
@@ -47,13 +48,13 @@ class SerieTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
-        guard let leagues = SourceOfTruth.shared.currentVideoGame?.leagues else {return}
-        let league = leagues[indexPath.row]
+        guard let series = SourceOfTruth.shared.currentLeague?.series else {return}
+        let serie = series[indexPath.row]
         
-        NetworkClient.shared.fetchLeague(leagueID: league.id) { (league) in
-            SourceOfTruth.shared.currentLeague = league
+        NetworkClient.shared.fetchSeries(seriesID: serie.id) { (series) in
+            SourceOfTruth.shared.currentSeries = series
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "toSeriesVC", sender: self)
+                self.performSegue(withIdentifier: "toTournamentVC", sender: self)
             }
         }
     }

@@ -78,5 +78,24 @@ class NetworkClient{
             }
             }.resume()
     }
+    func fetchSeries(seriesID: Int, completion: @escaping (Series?) -> Void){
+        let cheatingURL = URL(string: "https://api.pandascore.co/series/\(seriesID).json?token=1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY")
+        print(cheatingURL)
+        URLSession.shared.dataTask(with: cheatingURL!) { (data, _, error) in
+            if let error = error {
+                print("Error with dataTask: \(#function) \(error) \(error.localizedDescription)")
+                completion(nil); return
+            }
+            guard let data = data else { completion(nil); return}
+            
+            do{
+                let series = try JSONDecoder().decode(Series.self, from: data)
+                completion(series)
+            }catch let error{
+                print("Error fetching game \(error) \(error.localizedDescription)")
+                completion(nil);return
+            }
+            }.resume()
+    }
     
 }
