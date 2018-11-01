@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C357F581218A1990006F9BCC /* SourceOfTruth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F580218A1990006F9BCC /* SourceOfTruth.swift */; };
+		C357F585218A23B9006F9BCC /* LeagueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F584218A23B9006F9BCC /* LeagueTableViewController.swift */; };
+		C357F587218A23CC006F9BCC /* SerieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F586218A23CC006F9BCC /* SerieTableViewController.swift */; };
+		C357F589218A23D6006F9BCC /* TournamentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F588218A23D6006F9BCC /* TournamentTableViewController.swift */; };
+		C357F58B218A23E4006F9BCC /* MatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F58A218A23E4006F9BCC /* MatchTableViewController.swift */; };
+		C357F58D218A23EE006F9BCC /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F58C218A23EE006F9BCC /* PlayerTableViewController.swift */; };
+		C357F58F218A23F7006F9BCC /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F58E218A23F7006F9BCC /* TeamTableViewController.swift */; };
+		C357F59A218A3A49006F9BCC /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F599218A3A49006F9BCC /* DiscoverTableViewCell.swift */; };
+		C357F59C218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F59B218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift */; };
+		C357F59E218A59F7006F9BCC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F59D218A59F7006F9BCC /* NetworkClient.swift */; };
 		C37493002188D64000D07373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37492FF2188D64000D07373 /* AppDelegate.swift */; };
 		C37493072188D64100D07373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37493062188D64100D07373 /* Assets.xcassets */; };
 		C374930A2188D64100D07373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493082188D64100D07373 /* LaunchScreen.storyboard */; };
@@ -17,7 +27,7 @@
 		C37493252188DCBE00D07373 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493242188DCBE00D07373 /* Discover.storyboard */; };
 		C374932A2188E51700D07373 /* Attribution Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37493292188E51700D07373 /* Attribution Text.swift */; };
 		C374932E2188ED2000D07373 /* EscoreTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374932D2188ED2000D07373 /* EscoreTabBarController.swift */; };
-		C37493302188FB1C00D07373 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */; };
+		C37493302188FB1C00D07373 /* VideoGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374932F2188FB1C00D07373 /* VideoGameTableViewController.swift */; };
 		C3749334218909F200D07373 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3749333218909F200D07373 /* VideoGame.swift */; };
 		C374933621890A9D00D07373 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933521890A9D00D07373 /* League.swift */; };
 		C374933821890BA100D07373 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374933721890BA100D07373 /* Series.swift */; };
@@ -33,6 +43,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C357F580218A1990006F9BCC /* SourceOfTruth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOfTruth.swift; sourceTree = "<group>"; };
+		C357F584218A23B9006F9BCC /* LeagueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableViewController.swift; sourceTree = "<group>"; };
+		C357F586218A23CC006F9BCC /* SerieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieTableViewController.swift; sourceTree = "<group>"; };
+		C357F588218A23D6006F9BCC /* TournamentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewController.swift; sourceTree = "<group>"; };
+		C357F58A218A23E4006F9BCC /* MatchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewController.swift; sourceTree = "<group>"; };
+		C357F58C218A23EE006F9BCC /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		C357F58E218A23F7006F9BCC /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		C357F599218A3A49006F9BCC /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		C357F59B218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverVideoGameTableViewCell.swift; sourceTree = "<group>"; };
+		C357F59D218A59F7006F9BCC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		C37492FC2188D64000D07373 /* Escores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Escores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37492FF2188D64000D07373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37493062188D64100D07373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +65,7 @@
 		C37493242188DCBE00D07373 /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		C37493292188E51700D07373 /* Attribution Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attribution Text.swift"; sourceTree = "<group>"; };
 		C374932D2188ED2000D07373 /* EscoreTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscoreTabBarController.swift; sourceTree = "<group>"; };
-		C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		C374932F2188FB1C00D07373 /* VideoGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameTableViewController.swift; sourceTree = "<group>"; };
 		C3749333218909F200D07373 /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
 		C374933521890A9D00D07373 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		C374933721890BA100D07373 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
@@ -71,6 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C357F590218A2405006F9BCC /* DiscoverControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C374932F2188FB1C00D07373 /* VideoGameTableViewController.swift */,
+				C357F584218A23B9006F9BCC /* LeagueTableViewController.swift */,
+				C357F586218A23CC006F9BCC /* SerieTableViewController.swift */,
+				C357F588218A23D6006F9BCC /* TournamentTableViewController.swift */,
+				C357F58A218A23E4006F9BCC /* MatchTableViewController.swift */,
+				C357F58E218A23F7006F9BCC /* TeamTableViewController.swift */,
+				C357F58C218A23EE006F9BCC /* PlayerTableViewController.swift */,
+			);
+			path = DiscoverControllers;
+			sourceTree = "<group>";
+		};
 		C37492F32188D64000D07373 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +212,8 @@
 		C37493182188D9B200D07373 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C357F580218A1990006F9BCC /* SourceOfTruth.swift */,
+				C357F59D218A59F7006F9BCC /* NetworkClient.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -185,6 +221,8 @@
 		C37493192188D9B300D07373 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C357F599218A3A49006F9BCC /* DiscoverTableViewCell.swift */,
+				C357F59B218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				C374932D2188ED2000D07373 /* EscoreTabBarController.swift */,
-				C374932F2188FB1C00D07373 /* DiscoverTableViewController.swift */,
+				C357F590218A2405006F9BCC /* DiscoverControllers */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -281,20 +319,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C357F581218A1990006F9BCC /* SourceOfTruth.swift in Sources */,
+				C357F59E218A59F7006F9BCC /* NetworkClient.swift in Sources */,
 				C374932E2188ED2000D07373 /* EscoreTabBarController.swift in Sources */,
 				C3749346218917A100D07373 /* Game.swift in Sources */,
 				C374933621890A9D00D07373 /* League.swift in Sources */,
+				C357F589218A23D6006F9BCC /* TournamentTableViewController.swift in Sources */,
 				C37493422189177D00D07373 /* Winner.swift in Sources */,
 				C374933821890BA100D07373 /* Series.swift in Sources */,
+				C357F585218A23B9006F9BCC /* LeagueTableViewController.swift in Sources */,
+				C357F59A218A3A49006F9BCC /* DiscoverTableViewCell.swift in Sources */,
 				C374933A21890F6300D07373 /* Tournament.swift in Sources */,
 				C37493002188D64000D07373 /* AppDelegate.swift in Sources */,
-				C37493302188FB1C00D07373 /* DiscoverTableViewController.swift in Sources */,
+				C37493302188FB1C00D07373 /* VideoGameTableViewController.swift in Sources */,
+				C357F58D218A23EE006F9BCC /* PlayerTableViewController.swift in Sources */,
 				C374932A2188E51700D07373 /* Attribution Text.swift in Sources */,
 				C37493442189179000D07373 /* Live.swift in Sources */,
+				C357F58F218A23F7006F9BCC /* TeamTableViewController.swift in Sources */,
+				C357F58B218A23E4006F9BCC /* MatchTableViewController.swift in Sources */,
 				C37493402189176700D07373 /* Opponent.swift in Sources */,
 				C37493482189182800D07373 /* Team.swift in Sources */,
+				C357F59C218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift in Sources */,
 				C3749334218909F200D07373 /* VideoGame.swift in Sources */,
 				C374933C218911FF00D07373 /* Match.swift in Sources */,
+				C357F587218A23CC006F9BCC /* SerieTableViewController.swift in Sources */,
 				C374934A218919AE00D07373 /* Player.swift in Sources */,
 				C374933E2189175300D07373 /* Result.swift in Sources */,
 			);
