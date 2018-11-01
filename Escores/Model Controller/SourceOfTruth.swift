@@ -21,7 +21,6 @@ class SourceOfTruth{
     var currentGame: Game?
     var currentWinner: Winner?
     var currentResult: Result?
-    var currentOpponent: Opponent?
     var currentTeam: Team?
     var currentPlayer: Player?
     
@@ -33,7 +32,6 @@ class SourceOfTruth{
     var gameArray: [Game] = []
     var winnerArray: [Winner] = []
     var resultArray: [Result] = []
-    var opponentArray: [Opponent] = []
     var teamArray: [Team] = []
     var playerArray: [Player] = []
 }

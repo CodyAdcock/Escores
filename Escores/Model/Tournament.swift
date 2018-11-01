@@ -47,8 +47,8 @@ import Foundation
 
 struct Tournament: Decodable{
     let id: Int
-    let name: String
-    let beginAt: String
+    let name: String?
+    let beginAt: String?
     let matches: [MatchDictionary]
     
     private enum CodingKeys: String, CodingKey {
@@ -60,13 +60,15 @@ struct Tournament: Decodable{
     
     struct MatchDictionary: Decodable{
         let id: Int
-        let name: String
-        let beginAt: String
+        let name: String?
+        let beginAt: String?
+        let matchID: Int?
         
         private enum CodingKeys: String, CodingKey {
             case id = "id"
             case name = "name"
             case beginAt = "begin_at"
+            case matchID = "match_id"
         }
     }
 }

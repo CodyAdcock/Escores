@@ -40,7 +40,7 @@ import Foundation
 //}
 
 struct Series: Decodable{
-    let id: Int?
+    let id: Int
     let url: String?
     let name: String?
     let year: Int?
@@ -54,7 +54,7 @@ struct Series: Decodable{
         case tournaments = "tournaments"
     }
     struct TournamentDictionary: Decodable{
-        let id: Int?
+        let id: Int
         let name: String?
         let beginAt: String?
         

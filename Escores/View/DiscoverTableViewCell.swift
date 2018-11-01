@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import WebKit
+
 
 class DiscoverTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var flavorText: UILabel!
     @IBOutlet weak var linkedImage: UIImageView!
     
     var myText: String?{
         didSet{
-           flavorText.text = myText
+            flavorText.text = myText
             if linkedImage.image == nil{
                 linkedImage.isHidden = true
             }
@@ -42,9 +44,10 @@ class DiscoverTableViewCell: UITableViewCell {
                         self.linkedImage.image = image
                         self.linkedImage.isHidden = false
                     }
+                }else{
+                  print("Image conversion error")
                 }
             }
         }
     }
-    
 }

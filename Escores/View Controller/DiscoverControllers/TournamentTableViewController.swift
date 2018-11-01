@@ -15,7 +15,7 @@ class TournamentTableViewController: UITableViewController {
         
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false
-        self.navigationController!.navigationBar.tintColor = .white
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
     }
     
     
@@ -47,13 +47,13 @@ class TournamentTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
-        guard let leagues = SourceOfTruth.shared.currentVideoGame?.leagues else {return}
-        let league = leagues[indexPath.row]
+        guard let tournaments = SourceOfTruth.shared.currentSeries?.tournaments else {return}
+        let tournament = tournaments[indexPath.row]
         
-        NetworkClient.shared.fetchLeague(leagueID: league.id) { (league) in
-            SourceOfTruth.shared.currentLeague = league
+        NetworkClient.shared.fetchTournament(tournamentID: tournament.id) { (tournament) in
+            SourceOfTruth.shared.currentTournament = tournament
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "toSeriesVC", sender: self)
+                self.performSegue(withIdentifier: "toMatchVC", sender: self)
             }
         }
     }

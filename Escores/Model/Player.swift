@@ -7,17 +7,25 @@
 //
 
 import Foundation
-struct Player{
-    let id: String
-    let slug: String
-    let name: String
-    let firstName: String
-    let lastName: String
-    let imageURL: String
-    let role: String
-    let bio: String
-    let hometown: String
-    let currentTeam: Team
-    let currentVideoGame: VideoGame
+struct Player: Decodable{
+    let id: Int?
+    let name: String?
+    let firstName: String?
+    let lastName: String?
+    let imageURL: String?
+    let role: String?
+    let bio: String?
+    let hometown: String?
     
+    private enum CodingKeys: String, CodingKey{
+        case id = "id"
+        case name = "name"
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case imageURL = "image_url"
+        case role = "role"
+        case bio = "bio"
+        case hometown = "hometown"
+
+    }
 }
