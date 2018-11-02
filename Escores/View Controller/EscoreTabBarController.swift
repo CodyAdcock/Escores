@@ -14,16 +14,16 @@ class EscoreTabBarController: UITabBarController {
         super.viewDidLoad()
         
         guard let homeNav = UIStoryboard(name: "Home", bundle: .main).instantiateInitialViewController(),
-            let newsNav = UIStoryboard(name: "News", bundle: .main).instantiateInitialViewController(),
+            let searchNav = UIStoryboard(name: "Search", bundle: .main).instantiateInitialViewController(),
             let statsNav = UIStoryboard(name: "Stats", bundle: .main).instantiateInitialViewController(),
             let discoverNav = UIStoryboard(name: "Discover", bundle: .main).instantiateInitialViewController()else {return}
         
         homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home72"), tag: 0)
-        newsNav.tabBarItem = UITabBarItem(title: "News", image: #imageLiteral(resourceName: "world72"), tag: 1)
+        searchNav.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "search72"), tag: 1)
         statsNav.tabBarItem = UITabBarItem(title: "Stats", image: #imageLiteral(resourceName: "details72"), tag: 2)
-        discoverNav.tabBarItem = UITabBarItem(title: "Discover", image: #imageLiteral(resourceName: "search72"), tag: 3)
+        discoverNav.tabBarItem = UITabBarItem(title: "Discover", image: #imageLiteral(resourceName: "world72"), tag: 3)
         
-        self.viewControllers = [ homeNav, newsNav, statsNav, discoverNav]
+        self.viewControllers = [ homeNav, searchNav, statsNav, discoverNav]
         
         //custom colors
         tabBar.barTintColor = .black

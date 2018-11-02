@@ -45,6 +45,8 @@ struct Series: Decodable{
     let name: String?
     let year: Int?
     let tournaments: [TournamentDictionary]?
+    let currentGame: VideoGameName
+    let slug: String
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -52,6 +54,8 @@ struct Series: Decodable{
         case name = "name"
         case year = "year"
         case tournaments = "tournaments"
+        case currentGame = "videogame"
+        case slug = "slug"
     }
     struct TournamentDictionary: Decodable{
         let id: Int
@@ -62,6 +66,13 @@ struct Series: Decodable{
             case id = "id"
             case name = "name"
             case beginAt = "begin_at"
+        }
+    }
+    struct VideoGameName: Decodable{
+        let name: String
+        
+        private enum CodingKeys: String, CodingKey{
+            case name = "name"
         }
     }
 }

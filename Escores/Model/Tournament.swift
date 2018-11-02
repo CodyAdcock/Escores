@@ -50,12 +50,16 @@ struct Tournament: Decodable{
     let name: String?
     let beginAt: String?
     let matches: [MatchDictionary]
+    let currentGame: VideoGameName
+
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
         case name = "name"
         case beginAt = "begin_at"
         case matches = "matches"
+        case currentGame = "videogame"
+
     }
     
     struct MatchDictionary: Decodable{
@@ -69,6 +73,13 @@ struct Tournament: Decodable{
             case name = "name"
             case beginAt = "begin_at"
             case matchID = "match_id"
+        }
+    }
+    struct VideoGameName: Decodable{
+        let name: String
+        
+        private enum CodingKeys: String, CodingKey{
+            case name = "name"
         }
     }
 }

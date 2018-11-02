@@ -65,7 +65,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK9-ts-yYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="126.38680659670166"/>
+            <point key="canvasLocation" x="238" y="126"/>
         </scene>
         <!--Leagues-->
         <scene sceneID="veb-Dl-HaO">
@@ -146,7 +146,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RfD-Wc-RUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-833" y="128"/>
+            <point key="canvasLocation" x="-857" y="127"/>
         </scene>
         <!--Series-->
         <scene sceneID="z3i-Sz-lAD">
@@ -216,7 +216,7 @@
         <!--Tournaments-->
         <scene sceneID="5SJ-pi-ZGo">
             <objects>
-                <tableViewController title="Tournaments" id="9sK-rc-gc9" customClass="TournamentTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tournamentTableView" title="Tournaments" id="9sK-rc-gc9" customClass="TournamentTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w0U-5l-yuS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +281,7 @@
         <!--Matches-->
         <scene sceneID="ljA-Z0-aXe">
             <objects>
-                <tableViewController title="Matches" id="bKV-H2-rcK" customClass="MatchTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="matchesStoryBoard" title="Matches" id="bKV-H2-rcK" customClass="MatchTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RBk-b7-jZ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,13 +301,13 @@
                                             <rect key="frame" x="8" y="8" width="359" height="85.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(LEAGUE PLACEHOLDER)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFx-I4-Zi8">
-                                                    <rect key="frame" x="0.0" y="10.5" width="286.5" height="64.5"/>
+                                                    <rect key="frame" x="0.0" y="10.5" width="298.5" height="64.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CNj-Jx-Vt1">
-                                                    <rect key="frame" x="294.5" y="19" width="64.5" height="47.5"/>
+                                                    <rect key="frame" x="306.5" y="23.5" width="52.5" height="38.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="CNj-Jx-Vt1" secondAttribute="height" multiplier="113:83" id="ZK9-vQ-Nwn"/>
                                                     </constraints>
@@ -346,7 +346,7 @@
         <!--Teams-->
         <scene sceneID="IAC-jr-2eX">
             <objects>
-                <tableViewController title="Teams" id="ZsQ-io-Zhb" customClass="TeamTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="teamsStoryBoard" title="Teams" id="ZsQ-io-Zhb" customClass="TeamTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nes-tf-c6e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,6 +15,7 @@ class NetworkClient{
     let baseURL = URL(string: "https://api.pandascore.co")
     let apiKey = "token=1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY"
     
+    //Archive Fetches
     
     func fetchVideoGame(game: String, completion: @escaping (VideoGame?) -> Void){
         
@@ -171,6 +172,66 @@ class NetworkClient{
             do{
                 let players = try JSONDecoder().decode(Player.self, from: data)
                 completion(players)
+            }catch let error{
+                print("Error fetching game \(error) \(error.localizedDescription)")
+                completion(nil);return
+            }
+            }.resume()
+    }
+    
+    //Running Fetches
+    func fetchSeriesRunning(completion: @escaping ([Series]?) -> Void){
+        let cheatingURL = URL(string: "https://api.pandascore.co/series/running.json?token=1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY")
+        print(cheatingURL)
+        URLSession.shared.dataTask(with: cheatingURL!) { (data, _, error) in
+            if let error = error {
+                print("Error with dataTask: \(#function) \(error) \(error.localizedDescription)")
+                completion(nil); return
+            }
+            guard let data = data else { completion(nil); return}
+            
+            do{
+                let series = try JSONDecoder().decode([Series].self, from: data)
+                completion(series)
+            }catch let error{
+                print("Error fetching game \(error) \(error.localizedDescription)")
+                completion(nil);return
+            }
+            }.resume()
+    }
+    func fetchTournamentRunning(completion: @escaping ([Tournament]?) -> Void){
+        let cheatingURL = URL(string: "https://api.pandascore.co/tournaments/running.json?token=1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY")
+        print(cheatingURL)
+        URLSession.shared.dataTask(with: cheatingURL!) { (data, _, error) in
+            if let error = error {
+                print("Error with dataTask: \(#function) \(error) \(error.localizedDescription)")
+                completion(nil); return
+            }
+            guard let data = data else { completion(nil); return}
+            
+            do{
+                let tournaments = try JSONDecoder().decode([Tournament].self, from: data)
+                completion(tournaments)
+            }catch let error{
+                print("Error fetching game \(error) \(error.localizedDescription)")
+                completion(nil);return
+            }
+            }.resume()
+    }
+    func fetchMatchRunning(completion: @escaping ([Match]?) -> Void){
+        
+        let cheatingURL = URL(string: "https://api.pandascore.co/matches/running.json?token=1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY")
+        print(cheatingURL)
+        URLSession.shared.dataTask(with: cheatingURL!) { (data, _, error) in
+            if let error = error {
+                print("Error with dataTask: \(#function) \(error) \(error.localizedDescription)")
+                completion(nil); return
+            }
+            guard let data = data else { completion(nil); return}
+            
+            do{
+                let matches = try JSONDecoder().decode([Match].self, from: data)
+                completion(matches)
             }catch let error{
                 print("Error fetching game \(error) \(error.localizedDescription)")
                 completion(nil);return
