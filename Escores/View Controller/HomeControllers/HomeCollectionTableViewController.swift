@@ -91,7 +91,7 @@ class HomeCollectionTableViewController: UITableViewController, UICollectionView
         case seriesCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seriesCell", for: indexPath) as? HomeCollectionViewCell
             let seriesName = seriesRunning[indexPath.row].slug
-            cell?.name = seriesName.replacingOccurrences(of: "-", with: " ").capitalized.replacingOccurrences(of: "Of", with: "of").replacingOccurrences(of: "20", with: "- 20")
+            cell?.name = seriesName.replacingOccurrences(of: "-", with: " ").capitalized.replacingOccurrences(of: "Of", with: "of").replacingOccurrences(of: "20", with: "- 20").replacingOccurrences(of: "Cs Go", with: "CS:GO").replacingOccurrences(of: "Cs", with: "CS")
             cell?.videoGameName = seriesRunning[indexPath.row].currentGame.name
             return cell ?? UICollectionViewCell()
             
@@ -113,6 +113,28 @@ class HomeCollectionTableViewController: UITableViewController, UICollectionView
         default:
             return UICollectionViewCell()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.05 * Double(indexPath.row),
+            animations: {
+                cell.alpha = 1
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.alpha = 0
+        
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.05 * Double(indexPath.row),
+            animations: {
+                cell.alpha = 1
+        })
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
