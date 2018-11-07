@@ -1,5 +1,5 @@
 //
-//  SerieTableViewController.swift
+//  MatchTableViewController.swift
 //  Escores
 //
 //  Created by Cody on 10/31/18.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SerieTableViewController: UITableViewController {
+class MatchTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get rid of unused cells
+        tableView.tableFooterView = UIView()
         
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false
@@ -20,17 +22,16 @@ class SerieTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = SourceOfTruth.shared.currentLeague?.series?.count else {return 0}
+        guard let count = SourceOfTruth.shared.currentTournament?.matches.count else {return 0}
         return count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "seriesCell", for: indexPath) as? DiscoverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as? DiscoverTableViewCell
         
-        guard let series = SourceOfTruth.shared.currentLeague?.series else {return UITableViewCell()}
-        let year = (series[indexPath.row].year)
-        let name = series[indexPath.row].name ?? "Series \(indexPath.row + 1)"
-        cell?.myText = "\(name) \nYear: \(year!)"
+        guard let matches = SourceOfTruth.shared.currentTournament?.matches else {return UITableViewCell()}
+        let name = matches[indexPath.row].name ?? "Match \(indexPath.row + 1)"
+        cell?.myText = name
         
         return cell ?? UITableViewCell()
     }
@@ -48,13 +49,13 @@ class SerieTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
-        guard let series = SourceOfTruth.shared.currentLeague?.series else {return}
-        let serie = series[indexPath.row]
+        guard let matches = SourceOfTruth.shared.currentTournament?.matches else {return}
+        let match = matches[indexPath.row]
         
-        NetworkClient.shared.fetchSeries(seriesID: serie.id) { (series) in
-            SourceOfTruth.shared.currentSeries = series
+        NetworkClient.shared.fetchMatch(matchID: match.id) { (match) in
+            SourceOfTruth.shared.currentMatch = match
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "toTournamentVC", sender: self)
+                self.performSegue(withIdentifier: "toTeamVC", sender: self)
             }
         }
     }

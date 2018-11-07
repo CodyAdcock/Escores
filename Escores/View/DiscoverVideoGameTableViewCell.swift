@@ -31,5 +31,7 @@ class DiscoverVideoGameTableViewCell: UITableViewCell {
             
         }
     }
-
+    override func prepareForReuse() {
+        logoImage.image = nil
+    }
 }

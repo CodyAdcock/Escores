@@ -12,6 +12,8 @@ class PlayerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get rid of unused cells
+        tableView.tableFooterView = UIView()
         
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false

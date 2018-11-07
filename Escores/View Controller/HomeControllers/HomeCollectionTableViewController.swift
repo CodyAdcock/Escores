@@ -21,6 +21,8 @@ class HomeCollectionTableViewController: UITableViewController, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get rid of unused cells
+        tableView.tableFooterView = UIView()
         
         let logo = UIImage(named: "logo spaced")
         let imageView = UIImageView(image: logo)

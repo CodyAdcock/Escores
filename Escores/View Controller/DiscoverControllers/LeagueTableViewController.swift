@@ -12,14 +12,19 @@ class LeagueTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //get rid of unused cells
+        tableView.tableFooterView = UIView()
+        
         self.navigationController!.navigationBar.barStyle = .blackOpaque
         self.navigationController!.navigationBar.isTranslucent = false
         self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
         
-        
+        if SourceOfTruth.shared.currentVideoGame?.leagues.count == 1{
+            OnlyOneSkip()
+        }
     }
-
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = SourceOfTruth.shared.currentVideoGame?.leagues.count else {return 0}
@@ -33,7 +38,13 @@ class LeagueTableViewController: UITableViewController {
         
         cell?.myText = leagues[indexPath.row].name
         cell?.imageAsUrlString = leagues[indexPath.row].imageUrl
-
+        
+        if(cell!.isSelected){
+            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
+        }else{
+            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        }
+        
         return cell ?? UITableViewCell()
     }
  
@@ -52,7 +63,12 @@ class LeagueTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         guard let leagues = SourceOfTruth.shared.currentVideoGame?.leagues else {return}
         let league = leagues[indexPath.row]
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as? DiscoverTableViewCell
+        if(cell!.isSelected){
+            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
+        }else{
+            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        }
         NetworkClient.shared.fetchLeague(leagueID: league.id) { (league) in
             SourceOfTruth.shared.currentLeague = league
             DispatchQueue.main.async {
@@ -61,4 +77,18 @@ class LeagueTableViewController: UITableViewController {
         }
     }
 
+    
+    func OnlyOneSkip(){
+        guard let leagues = SourceOfTruth.shared.currentVideoGame?.leagues else {return}
+        let league = leagues[0]
+        
+        NetworkClient.shared.fetchLeague(leagueID: league.id) { (league) in
+            SourceOfTruth.shared.currentLeague = league
+            DispatchQueue.main.async {
+                
+            }
+        }
+    }
+    
+    
 }

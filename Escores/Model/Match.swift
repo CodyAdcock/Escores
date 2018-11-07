@@ -61,6 +61,7 @@ struct Match: Decodable{
     let matchID: String?
     let opponents: [OpponentsDictionary]?
     let currentGame: VideoGameName?
+    let results: [ResultsDictionary]?
 
     
     private enum CodingKeys: String, CodingKey {
@@ -70,6 +71,7 @@ struct Match: Decodable{
         case matchID = "match_id"
         case opponents = "opponents"
         case currentGame = "videogame"
+        case results = "results"
 
     }
     
@@ -79,19 +81,14 @@ struct Match: Decodable{
         private enum CodingKeys: String, CodingKey{
          case team = "opponent"
         }
+    }
+    struct ResultsDictionary: Decodable{
+        let teamID: Int
+        let score: Int
         
-        struct TeamDictionary: Decodable{
-            let id: Int?
-            let name: String
-            let acronym: String?
-            let imageUrl: String?
-            
-            private enum CodingKeys: String, CodingKey {
-                case id = "id"
-                case name = "name"
-                case acronym = "acronym"
-                case imageUrl = "image_url"
-            }
+        private enum CodingKeys: String, CodingKey{
+            case teamID = "team_id"
+            case score = "score"
         }
     }
     struct VideoGameName: Decodable{
@@ -100,5 +97,18 @@ struct Match: Decodable{
         private enum CodingKeys: String, CodingKey{
             case name = "name"
         }
+    }
+}
+struct TeamDictionary: Decodable{
+    let id: Int?
+    let name: String
+    let acronym: String?
+    let imageUrl: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case acronym = "acronym"
+        case imageUrl = "image_url"
     }
 }

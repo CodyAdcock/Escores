@@ -23,7 +23,7 @@ class PlayerDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let player = SourceOfTruth.shared.currentPlayer else {return}
-        
+                
         //hide trouble children for now
         bioLabel.isHidden = true
         teamLabel.isHidden = true

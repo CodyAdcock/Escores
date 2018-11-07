@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8L-YB-d8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.2" y="-216.79160419790108"/>
+            <point key="canvasLocation" x="1554" y="-100"/>
         </scene>
         <!--Search-->
         <scene sceneID="IG7-DK-yJ4">
@@ -26,7 +26,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMq-Q9-CQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.2" y="-27.886056971514247"/>
+            <point key="canvasLocation" x="1575" y="264"/>
         </scene>
         <!--Stats-->
         <scene sceneID="eq3-Y0-jvp">
@@ -36,7 +36,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFh-0X-sgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.2" y="187.1064467766117"/>
+            <point key="canvasLocation" x="1856" y="75"/>
         </scene>
         <!--Discover-->
         <scene sceneID="mWI-8d-KWc">
@@ -46,7 +46,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVp-WB-pxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1567.2" y="358.92053973013498"/>
+            <point key="canvasLocation" x="1567" y="75"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xqq-Gk-UGm">
@@ -63,7 +63,6 @@
                     <connections>
                         <segue destination="CwD-kk-gWT" kind="relationship" relationship="viewControllers" id="9r4-UE-GoQ"/>
                         <segue destination="JEa-NZ-c7s" kind="relationship" relationship="viewControllers" id="JGc-B6-cqX"/>
-                        <segue destination="lcg-Zd-ikC" kind="relationship" relationship="viewControllers" id="CEw-4U-n1K"/>
                         <segue destination="N1h-b0-aJr" kind="relationship" relationship="viewControllers" id="Wfh-CQ-IW7"/>
                     </connections>
                 </tabBarController>

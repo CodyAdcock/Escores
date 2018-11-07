@@ -41,7 +41,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="seriesCell" id="N2j-vF-aV3" customClass="HomeCollectionViewCell" customModule="Escores" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="seriesCell" id="N2j-vF-aV3" customClass="HomeCollectionViewCell" customModule="Escores" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="15.5" width="220" height="144"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -186,7 +186,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="matchesCell" id="47r-5h-0fU" customClass="HomeCollectionViewCell" customModule="Escores" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="matchesCell" id="47r-5h-0fU" customClass="HomeCollectionViewCell" customModule="Escores" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="15.5" width="220" height="144"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="245.59999999999999" y="7.6461769115442282"/>
         </scene>
-        <!--tournamentTableView-->
+        <!--Discover-->
         <scene sceneID="j6U-Td-Lpj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Discover" referencedIdentifier="tournamentTableView" id="YxE-42-ZSK" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Discover" id="YxE-42-ZSK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFc-5x-jwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960" y="-205"/>
@@ -284,18 +284,18 @@
             </objects>
             <point key="canvasLocation" x="-849" y="9"/>
         </scene>
-        <!--matchesStoryBoard-->
+        <!--MatchesView-->
         <scene sceneID="jlS-Yc-Nx8">
             <objects>
-                <viewControllerPlaceholder storyboardName="Discover" referencedIdentifier="matchesStoryBoard" id="dVl-C0-INj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Discover" referencedIdentifier="MatchesView" id="dVl-C0-INj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aei-wj-2zZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="8"/>
         </scene>
-        <!--teamsStoryBoard-->
+        <!--Discover-->
         <scene sceneID="ssQ-H2-5Hu">
             <objects>
-                <viewControllerPlaceholder storyboardName="Discover" referencedIdentifier="teamsStoryBoard" id="Syu-sZ-hQw" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Discover" id="Syu-sZ-hQw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwL-7d-VN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="213"/>

@@ -40,17 +40,19 @@ struct League: Decodable{
         case imageUrl = "image_url"
         case series = "series"
     }
-    struct SeriesDictionary: Decodable{
-        let id: Int
-        let url: String?
-        let name: String?
-        let year: Int?
-        
-        private enum CodingKeys: String, CodingKey {
-            case id = "id"
-            case url = "url"
-            case name = "name"
-            case year = "year"
-        }
+    
+}
+
+struct SeriesDictionary: Decodable{
+    let id: Int
+    let url: String?
+    let name: String?
+    let year: Int?
+    
+    private enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case url = "url"
+        case name = "name"
+        case year = "year"
     }
 }

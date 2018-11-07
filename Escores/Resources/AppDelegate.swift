@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //custom tab bar
         window = UIWindow()
         window?.rootViewController = EscoreTabBarController()
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+        tabBarController.selectedIndex = 1
         
         return true
     }

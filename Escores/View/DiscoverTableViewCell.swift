@@ -41,13 +41,20 @@ class DiscoverTableViewCell: UITableViewCell {
             if let data = try? Data(contentsOf: myURL!){
                 if let image = UIImage(data: data){
                     DispatchQueue.main.async {
+                        self.linkedImage.alpha = 0
                         self.linkedImage.image = image
                         self.linkedImage.isHidden = false
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.linkedImage.alpha = 1
+                        })
                     }
                 }else{
                   print("Image conversion error")
                 }
             }
         }
+    }
+    override func prepareForReuse() {
+        linkedImage.image = nil
     }
 }

@@ -15,15 +15,15 @@ class EscoreTabBarController: UITabBarController {
         
         guard let homeNav = UIStoryboard(name: "Home", bundle: .main).instantiateInitialViewController(),
             let searchNav = UIStoryboard(name: "Search", bundle: .main).instantiateInitialViewController(),
-            let statsNav = UIStoryboard(name: "Stats", bundle: .main).instantiateInitialViewController(),
+//            let statsNav = UIStoryboard(name: "Stats", bundle: .main).instantiateInitialViewController(),
             let discoverNav = UIStoryboard(name: "Discover", bundle: .main).instantiateInitialViewController()else {return}
         
-        homeNav.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home72"), tag: 0)
-        searchNav.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "search72"), tag: 1)
-        statsNav.tabBarItem = UITabBarItem(title: "Stats", image: #imageLiteral(resourceName: "details72"), tag: 2)
-        discoverNav.tabBarItem = UITabBarItem(title: "Discover", image: #imageLiteral(resourceName: "world72"), tag: 3)
+        homeNav.tabBarItem = UITabBarItem(title: "Live  ", image: #imageLiteral(resourceName: "video72"), tag: 0)
+        discoverNav.tabBarItem = UITabBarItem(title: "Discover", image: #imageLiteral(resourceName: "world72"), tag: 1)
+        searchNav.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "search72"), tag: 2)
+//        statsNav.tabBarItem = UITabBarItem(title: "Stats", image: #imageLiteral(resourceName: "details72"), tag: 3)
         
-        self.viewControllers = [ homeNav, searchNav, statsNav, discoverNav]
+        self.viewControllers = [ homeNav,discoverNav, searchNav]
         
         //custom colors
         tabBar.barTintColor = .black

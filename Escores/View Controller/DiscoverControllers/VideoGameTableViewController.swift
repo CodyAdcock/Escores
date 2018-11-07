@@ -15,6 +15,9 @@ class VideoGameTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //get rid of unused cells
+        tableView.tableFooterView = UIView()
+        
         let logo = UIImage(named: "logo spaced")
         let imageView = UIImageView(image: logo)
         imageView.contentMode = .scaleAspectFit
@@ -29,6 +32,10 @@ class VideoGameTableViewController: UITableViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     // MARK: - Table view data source
 
 
@@ -38,8 +45,13 @@ class VideoGameTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "videoGameCell", for: indexPath) as? DiscoverVideoGameTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "videoGameCell", for: indexPath) as?DiscoverVideoGameTableViewCell
         cell?.name = games[indexPath.row]
+        if(cell!.isSelected){
+            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
+        }else{
+            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        }
         return cell ?? UITableViewCell()
     }
     
@@ -62,6 +74,12 @@ class VideoGameTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         let game = games[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "videoGameCell", for: indexPath) as? DiscoverVideoGameTableViewCell
+        if(cell!.isSelected){
+            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
+        }else{
+            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        }
         NetworkClient.shared.fetchVideoGame(game: game) { (videoGame) in
             SourceOfTruth.shared.currentVideoGame = videoGame
             DispatchQueue.main.async {
@@ -69,4 +87,6 @@ class VideoGameTableViewController: UITableViewController {
             }
         }
     }
+    
+    
 }
