@@ -26,23 +26,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-bF-kyE">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <subviews>
-                                        <searchBar contentMode="redraw" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="NyT-O9-xHv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                        <searchBar contentMode="redraw" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="NyT-O9-xHv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
                                         </searchBar>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qVU-0f-eNy">
-                                            <rect key="frame" x="0.0" y="52" width="375" height="29"/>
-                                            <segments>
-                                                <segment title="Tournament"/>
-                                                <segment title="Team"/>
-                                                <segment title="Player"/>
-                                            </segments>
-                                        </segmentedControl>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="qVU-0f-eNy" firstAttribute="width" secondItem="e9H-bF-kyE" secondAttribute="width" id="Gfe-0C-nOE"/>
                                         <constraint firstItem="NyT-O9-xHv" firstAttribute="width" secondItem="e9H-bF-kyE" secondAttribute="width" id="z0J-hb-6YU"/>
                                     </constraints>
                                 </stackView>
@@ -57,7 +48,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoGameCell" textLabel="Ygp-Rp-XqI" rowHeight="76" style="IBUITableViewCellStyleDefault" id="VFD-65-191">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" textLabel="Ygp-Rp-XqI" detailTextLabel="TO6-lJ-5QV" rowHeight="76" style="IBUITableViewCellStyleSubtitle" id="VFD-65-191">
                                 <rect key="frame" x="0.0" y="108" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VFD-65-191" id="2f4-mq-hQd">
@@ -65,9 +56,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ygp-Rp-XqI">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="75.5"/>
+                                            <rect key="frame" x="16" y="18" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TO6-lJ-5QV">
+                                            <rect key="frame" x="16" y="41.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -87,6 +85,9 @@
                     <navigationItem key="navigationItem" title="Discover View Controller" id="txR-V0-ilV" customClass="Discover"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newsSearchBar" destination="NyT-O9-xHv" id="gII-PQ-d4R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvb-ay-NdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

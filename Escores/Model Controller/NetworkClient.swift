@@ -239,4 +239,34 @@ class NetworkClient{
             }.resume()
     }
     
+    func fetchNews(searchTerm: String, completion: @escaping (NewsArticles?) -> Void){
+        let baseUrl = "https://newsapi.org/v2/everything?"
+        var esports = "+esports"
+        if searchTerm == "" || searchTerm == " "{
+            esports = "esports"
+        }
+        let topic = "q=\(searchTerm.replacingOccurrences(of: " ", with: "-"))\(esports)&"
+        let sort = "sortBy=popularity&"
+        let language = "language=en&"
+        let newsApiKey = "apiKey=b5ec9ad8472144dfb0692da532d7af64"
+        let newsApi = "\(baseUrl)\(topic)\(language)\(sort)\(newsApiKey)"
+        print(newsApi)
+        let url = URL(string: newsApi)
+        URLSession.shared.dataTask(with: url!) { (data, _, error) in
+            if let error = error {
+                print("Error with dataTask: \(#function) \(error) \(error.localizedDescription)")
+                completion(nil); return
+            }
+            guard let data = data else { completion(nil); return}
+            
+            do{
+                let articles = try JSONDecoder().decode(NewsArticles.self, from: data)
+                completion(articles)
+            }catch let error{
+                print("Error fetching game \(error) \(error.localizedDescription)")
+                completion(nil);return
+            }
+            }.resume()
+    }
+    
 }

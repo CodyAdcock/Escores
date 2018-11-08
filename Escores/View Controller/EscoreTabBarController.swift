@@ -20,7 +20,7 @@ class EscoreTabBarController: UITabBarController {
         
         homeNav.tabBarItem = UITabBarItem(title: "Live  ", image: #imageLiteral(resourceName: "video72"), tag: 0)
         discoverNav.tabBarItem = UITabBarItem(title: "Discover", image: #imageLiteral(resourceName: "world72"), tag: 1)
-        searchNav.tabBarItem = UITabBarItem(title: "Search", image: #imageLiteral(resourceName: "search72"), tag: 2)
+        searchNav.tabBarItem = UITabBarItem(title: "News", image: #imageLiteral(resourceName: "details72"), tag: 2)
 //        statsNav.tabBarItem = UITabBarItem(title: "Stats", image: #imageLiteral(resourceName: "details72"), tag: 3)
         
         self.viewControllers = [ homeNav,discoverNav, searchNav]
