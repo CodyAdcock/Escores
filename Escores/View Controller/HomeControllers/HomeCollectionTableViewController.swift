@@ -8,7 +8,11 @@
 
 import UIKit
 
-class HomeCollectionTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol LiveTeamSegueDelegate: class{
+    func segueTime(sender: LiveMatchCollectionViewCell)
+}
+
+class HomeCollectionTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate, LiveTeamSegueDelegate {
     
     @IBOutlet weak var seriesCollectionView: UICollectionView!
     @IBOutlet weak var tournamentsCollectionView: UICollectionView!
@@ -108,8 +112,9 @@ class HomeCollectionTableViewController: UITableViewController, UICollectionView
             return cell ?? UICollectionViewCell()
             
         case matchesCollectionView:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "matchesCell", for: indexPath) as? HomeCollectionViewCell
-            cell?.name = "\(matchesRunning[indexPath.row].currentGame?.name ?? "")\n\(matchesRunning[indexPath.row].name ?? "Unnamed Match")"
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "matchesCell", for: indexPath) as? LiveMatchCollectionViewCell
+            cell?.delegate = self
+            cell?.match = matchesRunning[indexPath.row]
             cell?.videoGameName = matchesRunning[indexPath.row].currentGame?.name ?? ""
             return cell ?? UICollectionViewCell()
         default:
@@ -155,15 +160,13 @@ class HomeCollectionTableViewController: UITableViewController, UICollectionView
                     self.performSegue(withIdentifier: "toMatchVC", sender: self)
                 }
             }
-        case matchesCollectionView:
-            NetworkClient.shared.fetchMatch(matchID: matchesRunning[indexPath.row].id!) { (matches) in
-                SourceOfTruth.shared.currentMatch = matches
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "toTeamVC", sender: self)
-                }
-            }
         default:
             return
+        }
+    }
+    func segueTime(sender: LiveMatchCollectionViewCell) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "toPlayerVC", sender: self)
         }
     }
     

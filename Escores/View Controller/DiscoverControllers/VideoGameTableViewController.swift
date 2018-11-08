@@ -14,7 +14,7 @@ class VideoGameTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //get rid of unused cells
         tableView.tableFooterView = UIView()
         

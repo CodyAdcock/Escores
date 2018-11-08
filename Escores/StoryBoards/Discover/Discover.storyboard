@@ -151,7 +151,7 @@
         <!--Series-->
         <scene sceneID="z3i-Sz-lAD">
             <objects>
-                <tableViewController title="Series" id="mK3-lN-4sd" customClass="SeriesTournamentTableViewController" customModule="SeriesView" sceneMemberID="viewController">
+                <tableViewController title="Series" id="mK3-lN-4sd" customClass="SeriesTournamentTableViewController" customModule="Escores" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h4o-N6-TDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,13 +252,13 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="LeagueNameLabel" destination="eCK-LK-X2i" id="E42-aI-mZ9"/>
+                        <outlet property="LeagueNameLabel" destination="eCK-LK-X2i" id="8Mr-3O-GvM"/>
                         <segue destination="9sK-rc-gc9" kind="show" identifier="toMatchVC" id="gvI-dR-g8v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTe-kO-p5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845.5999999999999" y="124.58770614692655"/>
+            <point key="canvasLocation" x="1820" y="126"/>
         </scene>
         <!--Matches-->
         <scene sceneID="5SJ-pi-ZGo">

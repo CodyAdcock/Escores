@@ -52,11 +52,6 @@ class SeriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TourneyCell", for: indexPath) as? TournamentCollectionViewCell
-        if(cell!.isSelected){
-            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
-        }else{
-            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        }
         guard let tournaments = self.series?.tournaments else {return UICollectionViewCell()}
             cell?.name = tournaments[indexPath.row].name
         return cell ?? UICollectionViewCell()
@@ -75,12 +70,6 @@ class SeriesTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         SourceOfTruth.shared.currentSeries = self.series
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TourneyCell", for: indexPath) as? TournamentCollectionViewCell
-        if(cell!.isSelected){
-            cell!.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.6784313725, blue: 0.8, alpha: 1)
-        }else{
-            cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        }
         guard let tournamentDictionaries = series?.tournaments else {return}
         NetworkClient.shared.fetchTournament(tournamentID: tournamentDictionaries[indexPath.row].id) { (tournament) in
             SourceOfTruth.shared.currentTournament = tournament
