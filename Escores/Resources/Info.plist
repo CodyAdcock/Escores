@@ -26,6 +26,8 @@
 	<string>b5ec9ad8472144dfb0692da532d7af64</string>
 	<key>PandaScore API Key</key>
 	<string>1TORRHXHHOf7egRXHaXiMaYWCuDS83_n8-oBAKMJQg_bRFclIeY</string>
+	<key>Twitter API Key</key>
+	<string>779hpFYBPcebiY9sbSCifTvcB</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>custom-in_the_zone</string>
