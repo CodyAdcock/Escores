@@ -24,6 +24,7 @@
 		C357F59C218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F59B218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift */; };
 		C357F59E218A59F7006F9BCC /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357F59D218A59F7006F9BCC /* NetworkClient.swift */; };
 		C37141BC2194EE180016E586 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37141BB2194EE180016E586 /* NewsArticle.swift */; };
+		C37141E82199E6BB0016E586 /* NewsArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37141E72199E6BB0016E586 /* NewsArticleTableViewCell.swift */; };
 		C37493002188D64000D07373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37492FF2188D64000D07373 /* AppDelegate.swift */; };
 		C37493072188D64100D07373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37493062188D64100D07373 /* Assets.xcassets */; };
 		C374930A2188D64100D07373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37493082188D64100D07373 /* LaunchScreen.storyboard */; };
@@ -73,6 +74,7 @@
 		C357F59B218A3E22006F9BCC /* DiscoverVideoGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverVideoGameTableViewCell.swift; sourceTree = "<group>"; };
 		C357F59D218A59F7006F9BCC /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		C37141BB2194EE180016E586 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		C37141E72199E6BB0016E586 /* NewsArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleTableViewCell.swift; sourceTree = "<group>"; };
 		C37492FC2188D64000D07373 /* Escores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Escores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37492FF2188D64000D07373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37493062188D64100D07373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				C3F123E32190D36D009DE4FD /* MatchTableViewCell.swift */,
 				C341630E219244EF0021CDF5 /* PlayerCollectionViewCell.swift */,
 				C3A58A84219358C800D1C75D /* LiveMatchCollectionViewCell.swift */,
+				C37141E72199E6BB0016E586 /* NewsArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				C374934A218919AE00D07373 /* Player.swift in Sources */,
 				C3416306219215C20021CDF5 /* SeriesTableViewCell.swift in Sources */,
 				C3F123E82190F27F009DE4FD /* TournamentMatchesTableViewController.swift in Sources */,
+				C37141E82199E6BB0016E586 /* NewsArticleTableViewCell.swift in Sources */,
 				C374933E2189175300D07373 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

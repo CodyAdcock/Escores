@@ -56,13 +56,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
-        cell.textLabel?.textColor = .white
-        cell.detailTextLabel?.textColor = .white
-        cell.detailTextLabel?.numberOfLines = 0
-        cell.textLabel?.text = newsArticles?.newsArticleDictionary[indexPath.row].title
-        cell.detailTextLabel?.text = newsArticles?.newsArticleDictionary[indexPath.row].description
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as? NewsArticleTableViewCell
+        
+        cell?.article = newsArticles?.newsArticleDictionary[indexPath.row]
+        return cell ?? UITableViewCell()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -70,5 +67,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         if let url = URL(string: newsURL) {
             UIApplication.shared.open(url, options: [:])
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }

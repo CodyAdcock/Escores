@@ -17,7 +17,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
     var player: PlayerDictionary? {
         didSet{
             DispatchQueue.main.async {
-                self.imageView.image = #imageLiteral(resourceName: "not-pictured")
+                self.imageView.image = nil
                 guard let player = self.player else {return}
                 self.imageView.layer.shadowColor = #colorLiteral(red: 0.2750247121, green: 0.7252599001, blue: 0.8348675966, alpha: 1)
                 self.imageView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -27,7 +27,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
                 self.gamerTagNameLabel.text = "\(player.name ?? "")\n\(player.firstName ?? "") \(player.lastName ?? "")"
                 self.roleTeamVideoGameLabel.text = "\(player.role ?? "") \(SourceOfTruth.shared.currentTeam?.name ?? "")"
                 self.bioLabel.text = player.bio ?? ""
-                guard let url = player.imageURL else {return}
+                guard let url = player.imageURL else {self.imageView.image = #imageLiteral(resourceName: "not-pictured"); return}
                 self.loadFromURL(urlAsString: url)
             }
         }
@@ -47,6 +47,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
                         })
                     }
                 }else{
+                    self.imageView.image = #imageLiteral(resourceName: "not-pictured")
                     print("Image conversion error")
                 }
             }
